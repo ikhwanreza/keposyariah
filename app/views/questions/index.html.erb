@@ -17,6 +17,7 @@
         <% if question.user == current_user %>
           <td><%= link_to 'Edit', edit_question_path(question) %></td>
           <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%= link_to 'New Question', new_question_path %>
         <% end %>
         <td><%= link_to 'Show', question %></td>
       </tr>
@@ -25,5 +26,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Question', new_question_path %>
